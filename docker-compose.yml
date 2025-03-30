@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  msft-recon:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./config:/opt/msft-recon-rs/config
+    command: ["--domain", "example.com", "--cloud", "commercial", "--json"]
+    environment:
+      - RUST_LOG=info
+      - RUST_BACKTRACE=1
+    
+  wiremock:
+    image: wiremock/wiremock:latest
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./tests/mocks:/home/wiremock/mappings
+    command: ["--verbose"]
