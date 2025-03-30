@@ -1,0 +1,30 @@
+[package]
+name = "msft-recon-rs"
+version = "0.1.0"
+edition = "2021"
+authors = ["Your Name <you@example.com>"] # TODO: Update author
+description = "Rust rewrite of MSFTRecon for M365/Azure reconnaissance"
+license = "MIT" # TODO: Confirm license or change
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+config = "0.14" # For loading config/default.toml
+quick-xml = { version = "0.31", features = ["serialize"] }
+reqwest = { version = "0.12", features = ["json", "rustls-tls"], default-features = false }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+thiserror = "1.0"
+tokio = { version = "1", features = ["full"] }
+trust-dns-resolver = "0.23"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+url = "2.5" # Useful for URL parsing/joining
+futures = "0.3"
+
+[dev-dependencies]
+proptest = "1"
+assert_cmd = "2.0"  # For testing CLI applications
+predicates = "3.0"  # For assertions on command output
+wiremock = "0.5"    # For mocking HTTP endpoints
+tempfile = "3.8"    # For creating temporary files/directories
+tokio-test = "0.4"  # For testing async code

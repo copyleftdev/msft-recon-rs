@@ -1,0 +1,40 @@
+# Test configuration for msft-recon-rs
+
+[clouds.commercial]
+login_endpoint = "http://127.0.0.1:39993/login"
+login_microsoftonline_host = "http://127.0.0.1:39993/login.microsoftonline.com"
+user_realm_endpoint = "http://127.0.0.1:39993/GetUserRealm.srf"
+openid_config_endpoint = "/.well-known/openid-configuration"
+azure_ad_connect_check_url = "http://127.0.0.1:39993/autologon.microsoftazuread-sso.com/"
+sharepoint_host_suffix = ".sharepoint.com"
+cdn_host_suffix = ".azureedge.net"
+ews_endpoint_host = "outlook.office365.com"
+activesync_endpoint_host = "outlook.office365.com"
+app_service_host_suffix = ".azurewebsites.net"
+storage_account_host_suffix = ".blob.core.windows.net"
+
+[clouds.gov]
+login_endpoint = "http://127.0.0.1:39993/login.microsoftonline.us"
+login_microsoftonline_host = "http://127.0.0.1:39993/login.microsoftonline.us"
+user_realm_endpoint = "http://127.0.0.1:39993/GetUserRealm.srf"
+openid_config_endpoint = "/.well-known/openid-configuration"
+azure_ad_connect_check_url = "http://127.0.0.1:39993/autologon.microsoftazuread-sso.com/"
+sharepoint_host_suffix = ".sharepoint.us"
+cdn_host_suffix = ".azureedge.us"
+ews_endpoint_host = "outlook.office365.us"
+activesync_endpoint_host = "outlook.office365.us"
+app_service_host_suffix = ".azurewebsites.us"
+storage_account_host_suffix = ".blob.core.windows.us"
+
+[clouds.cn]
+login_endpoint = "http://127.0.0.1:39993/login.partner.microsoftonline.cn"
+login_microsoftonline_host = "http://127.0.0.1:39993/login.partner.microsoftonline.cn"
+user_realm_endpoint = "http://127.0.0.1:39993/GetUserRealm.srf"
+openid_config_endpoint = "/.well-known/openid-configuration"
+azure_ad_connect_check_url = "http://127.0.0.1:39993/"
+sharepoint_host_suffix = ".sharepoint.cn"
+cdn_host_suffix = ".azureedge.cn"
+ews_endpoint_host = "outlook.partner.microsoftonline.cn"
+activesync_endpoint_host = "outlook.partner.microsoftonline.cn"
+app_service_host_suffix = ".chinacloudsites.cn"
+storage_account_host_suffix = ".blob.core.chinacloudapi.cn"
