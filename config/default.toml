@@ -1,0 +1,57 @@
+# Default configuration values for msft-recon-rs
+
+# Default settings
+default_user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.0.0 Safari/537.36"
+request_timeout_seconds = 10
+
+[clouds.commercial]
+# Based on common commercial endpoints
+login_endpoint = "https://login.microsoftonline.com"
+login_microsoftonline_host = "login.microsoftonline.com"
+autodiscover_endpoint = "https://autodiscover-s.outlook.com/autodiscover/autodiscover.xml"
+sharepoint_host_suffix = ".sharepoint.com"
+graph_endpoint = "https://graph.microsoft.com"
+# Add other relevant commercial endpoints based on checks
+user_realm_endpoint = "https://login.microsoftonline.com/getuserrealm.srf"
+openid_config_endpoint = "/.well-known/openid-configuration"
+azure_ad_connect_check_url = "https://autologon.microsoftazuread-sso.com/"
+cdn_host_suffix = ".azureedge.net"
+ews_endpoint_host = "outlook.office365.com"
+activesync_endpoint_host = "outlook.office365.com"
+app_service_host_suffix = ".azurewebsites.net"
+storage_account_host_suffix = ".blob.core.windows.net"
+# ... many more based on the specification's checks ...
+
+[clouds.gov]
+# Based on common US Government Cloud (GCC High / DoD) endpoints
+login_endpoint = "https://login.microsoftonline.us"
+login_microsoftonline_host = "login.microsoftonline.us"
+autodiscover_endpoint = "https://autodiscover-s.outlook.com/autodiscover/autodiscover.xml" # Often same as commercial initially, but realm check clarifies
+sharepoint_host_suffix = ".sharepoint.us"
+graph_endpoint = "https://graph.microsoft.us"
+user_realm_endpoint = "https://login.microsoftonline.us/getuserrealm.srf"
+openid_config_endpoint = "/.well-known/openid-configuration"
+azure_ad_connect_check_url = "https://autologon.microsoftazuread-sso.com/" # Verify this for Gov
+cdn_host_suffix = ".azureedge.us"
+ews_endpoint_host = "outlook.office365.us"
+activesync_endpoint_host = "outlook.office365.us"
+app_service_host_suffix = ".azurewebsites.us"
+storage_account_host_suffix = ".blob.core.windows.us"
+# ... add/adjust endpoints for Gov cloud ...
+
+[clouds.cn]
+# Based on common China Cloud (21Vianet) endpoints
+login_endpoint = "https://login.partner.microsoftonline.cn"
+login_microsoftonline_host = "login.partner.microsoftonline.cn"
+autodiscover_endpoint = "https://autodiscover.partner.microsoftonline.cn/autodiscover/autodiscover.xml"
+sharepoint_host_suffix = ".sharepoint.cn"
+graph_endpoint = "https://microsoftgraph.chinacloudapi.cn"
+user_realm_endpoint = "https://login.partner.microsoftonline.cn/getuserrealm.srf"
+openid_config_endpoint = "/.well-known/openid-configuration"
+azure_ad_connect_check_url = "" # AAD Connect SSO URL might differ or not apply in CN - needs verification
+cdn_host_suffix = ".azureedge.cn"
+ews_endpoint_host = "outlook.partner.microsoftonline.cn"
+activesync_endpoint_host = "outlook.partner.microsoftonline.cn"
+app_service_host_suffix = ".chinacloudsites.cn"
+storage_account_host_suffix = ".blob.core.chinacloudapi.cn"
+# ... add/adjust endpoints for China cloud ...
