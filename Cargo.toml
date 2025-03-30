@@ -2,10 +2,9 @@
 name = "msft-recon-rs"
 version = "0.1.0"
 edition = "2021"
-authors = ["Your Name <you@example.com>"] # TODO: Update author
+authors = ["copyleftdev <dj@codetestcode.io>"]
 description = "Rust rewrite of MSFTRecon for M365/Azure reconnaissance"
-license = "MIT" # TODO: Confirm license or change
-
+license = "MIT"
 [dependencies]
 clap = { version = "4", features = ["derive"] }
 config = "0.15.11" # For loading config/default.toml
